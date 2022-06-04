@@ -26,35 +26,38 @@
         setTimeout(() => {
           locationButton.setAttribute("visible", true);
         }, 900);
+	setTimeout(() => {
+          fbButton.setAttribute("visible", true);
+        }, 1200);      
 
-        let newTab = '';
+        let currentTab = '';
         webButton.addEventListener('click', function (evt) {
           text.setAttribute("value", "https://google.com");
-          window.location.href="https://google.com";
+          window.open('https://google.com);
         });
         emailButton.addEventListener('click', function (evt) {
           text.setAttribute("value", "hello@softmind.tech");
-          newTab = 'email';
+          currentTab = 'email';
         });
         profileButton.addEventListener('click', function (evt) {
           text.setAttribute("value", "AR, VR solutions and consultation");
-          newTab = 'profile';
+          currentTab = 'profile';
         });
         locationButton.addEventListener('click', function (evt) {
           console.log("loc");
           text.setAttribute("value", "SASA GENERAL TRADING FZE, Dubai");
-          window.location.href="https://goo.gl/maps/ZDyVqjhorPaXxBFJ7";
+          window.open('https://goo.gl/maps/ZDyVqjhorPaXxBFJ7);
         });
 
         text.addEventListener('click', function (evt) {
-          if (newTab === 'location') {
+          if (currentTab === 'location') {
             window.location.href="https://google.com";
           }
         });
 	
 	fbButton.addEventListener('click', function (evt) {
           text.setAttribute("value", "SASA GENERAL TRADING FZE, Dubai");
-          window.location.href="https://facebook.com";
+          window.open('https://facebook.com);
         });      
       }
 
@@ -294,11 +297,11 @@
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
 	
-	<a-image visible=false id="fb-button" class="clickable" src="#icon-fb" position="0.7 -0.5 0" height="0.15" width="0.15"
+	<a-image visible=false id="fb-button" class="clickable" src="#icon-fb" position="0.7 -0.1 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>	
 
-         <a-text id="text" class="clickable" value="" color="black" align="center" width="0.5" position="0 -0.1 0" geometry="primitive:plane; height: 0.1; width: 0.5;" material="opacity: 0.5"></a-text>
+         <a-text id="text" class="clickable" value="" color="black" align="center" width="0.5" position="0 -0.3 0" geometry="primitive:plane; height: 0.1; width: 0.5;" material="opacity: 0.5"></a-text>
         </a-entity>
       </a-scene>
     </div>
