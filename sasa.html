@@ -28,7 +28,7 @@
 
         let currentTab = '';
         webButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "https://softmind.tech");
+          text.setAttribute("value", "https://google.com");
           currentTab = 'web';
         });
         emailButton.addEventListener('click', function (evt) {
@@ -47,7 +47,7 @@
 
         text.addEventListener('click', function (evt) {
           if (currentTab === 'web') {
-            window.location.href="https://softmind.tech";
+            window.location.href="https://google.com";
           }
         });
       }
@@ -84,7 +84,7 @@
             });
 
             paintandquestPreviewButton.addEventListener('click', () => {
-              paintandquestPreviewButton.setAttribute("visible", false);
+              paintandquestPreviewButton.setAttribute("visible", true);
               const testVideo = document.createElement( "video" );
               const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
               if (canplayWebm == "") {
