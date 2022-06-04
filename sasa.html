@@ -67,7 +67,7 @@
 	  <a-assets>
 	<img id="card" src="https://raw.githubusercontent.com/mzakstudio/ARCard/main/textures/sasa_card.png" />  
 	<video
-          id="card"
+          id="card1"
           src="https://github.com/mzakstudio/ARCard/blob/main/textures/perfume.mp4?raw=true"
           autoplay
           loop="true"
@@ -79,7 +79,7 @@
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 1.1.4; objects: .clickable"></a-camera>
 
        <a-entity id="example-target" mindar-image-target="targetIndex: 0">
-	<a-plane width="1" height="0.552" src="textures/sasa_card.png" class="intersectable" position="-0.192 0 -0.194" rotation="0 0 0" color="#FFFFFF" 
+	<a-plane width="1" height="0.552" src="#card1" class="intersectable" position="-0.192 0 -0.194" rotation="0 0 0" color="#FFFFFF" 
 ></a-plane>
       </a-entity>
     </a-scene>
