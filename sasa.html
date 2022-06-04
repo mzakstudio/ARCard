@@ -28,7 +28,7 @@
 
         let currentTab = '';
         webButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "https://google.com");
+          text.setAttribute("value", "href=https://google.com");
           currentTab = 'web';
         });
         emailButton.addEventListener('click', function (evt) {
@@ -84,7 +84,7 @@
             });
 
             paintandquestPreviewButton.addEventListener('click', () => {
-              paintandquestPreviewButton.setAttribute("visible", true);
+              paintandquestPreviewButton.setAttribute("visible", false);
               const testVideo = document.createElement( "video" );
               const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
               if (canplayWebm == "") {
@@ -237,9 +237,9 @@
           <img id="icon-play" src="textures/play.png" />
           <img id="icon-left" src="textures/left.png" />
           <img id="icon-right" src="textures/right.png" />
-          <img id="paintandquest-preview" src="textures/paintandquest-preview.png" />
-          <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="https://mzakstudio.github.io/ARCard/textures/perfume.mp4"></video>
-          <video id="paintandquest-video-webm" autoplay="true" loop="true" src="https://mzakstudio.github.io/ARCard/textures/perfume.webm"></video>
+          <img id="paintandquest-preview" src="textures/video-preview.jpg" />
+          <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="https://github.com/mzakstudio/ARCard/blob/main/textures/perfume.mp4?raw=true"></video>
+          <video id="paintandquest-video-webm" autoplay="true" loop="true" src="https://github.com/mzakstudio/ARCard/blob/main/textures/perfume.webm?raw=true"></video>
           <img id="coffeemachine-preview" src="textures/coffeemachine-preview.png" />
           <img id="peak-preview" src="textures/video-preview.jpg" />
           
@@ -290,7 +290,7 @@
 
          <a-gltf-model id="avatar" rotation="0 0 0" position="0 -0.25 0" scale="0.004 0.004 0.004" src="#avatarModel"></a-gltf-model> 
 
-          <a-text id="text" class="clickable" value="" color="black" align="center" width="0.5" position="0 -1 0" geometry="primitive:plane; height: 0.1; width: 0.5;" material="opacity: 0.5"></a-text>
+          <a-text id="text" class="clickable" value="" color="black" align="center" width="0.5" position="0 -0.1 0" geometry="primitive:plane; height: 0.1; width: 0.5;" material="opacity: 0.5"></a-text>
         </a-entity>
       </a-scene>
     </div>
