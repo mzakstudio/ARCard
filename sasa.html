@@ -49,12 +49,7 @@
           window.open('https://goo.gl/maps/ZDyVqjhorPaXxBFJ7');
         });
 
-        text.addEventListener('click', function (evt) {
-          if (currentTab === 'location') {
-            window.location.href="https://google.com";
-          }
-        });
-	
+        	
 	fbButton.addEventListener('click', function (evt) {
           text.setAttribute("value", "SASA GENERAL TRADING FZE, Dubai");
           window.open('https://facebook.com');
@@ -300,7 +295,6 @@
 	<a-image visible=false id="fb-button" class="clickable" src="#icon-fb" position="0.7 -0.1 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>	
-
          </a-entity>
       </a-scene>
     </div>
